@@ -25,17 +25,27 @@ export class Counter {
   }
 }
 
-export function setupCounter(element: HTMLButtonElement) {
+export function setupCounter(
+  incrementEl: HTMLButtonElement,
+  decrementEl?: HTMLButtonElement
+) {
   const counter = new Counter(0);
-  
+
   const updateDisplay = () => {
-    element.innerHTML = `count is ${counter.getCount()} :)`;
+    incrementEl.innerHTML = `count is ${counter.getCount()} :)`;
   };
 
-  element.addEventListener('click', () => {
+  incrementEl.addEventListener('click', () => {
     counter.increment();
     updateDisplay();
   });
+
+  if (decrementEl) {
+    decrementEl.addEventListener('click', () => {
+      counter.decrement();
+      updateDisplay();
+    });
+  }
 
   updateDisplay();
   return counter; // Useful for testing
