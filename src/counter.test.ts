@@ -19,6 +19,12 @@ describe('Counter', () => {
     expect(counter.getCount()).toBe(1);
   });
 
+  it('should decrement counter by 1', () => {
+    const counter = new Counter(5);
+    counter.decrement();
+    expect(counter.getCount()).toBe(4);
+  });
+
   it('should set counter to specific value', () => {
     const counter = new Counter();
     counter.setCount(10);

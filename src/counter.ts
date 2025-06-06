@@ -10,6 +10,11 @@ export class Counter {
     return this.count;
   }
 
+  decrement(): number {
+    this.count -= 1;
+    return this.count;
+  }
+
   getCount(): number {
     return this.count;
   }
