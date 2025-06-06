@@ -6,7 +6,7 @@ export class Counter {
   }
 
   increment(): number {
-    this.count += 1;
+    this.count += 2;
     return this.count;
   }
 
