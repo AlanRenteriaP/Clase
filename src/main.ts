@@ -14,6 +14,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <h1>Vite + TypeScript</h1>
     <div class="card">
       <button id="counter" style="background-color:black;" type="button"></button>
+      <button id="decrement" style="background-color:black;" type="button">decrement</button>
     </div>
     <p class="read-the-docs">
       Click on the Vite and TypeScript logos to learn more
@@ -21,6 +22,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </div>
 `
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+setupCounter(
+  document.querySelector<HTMLButtonElement>('#counter')!,
+  document.querySelector<HTMLButtonElement>('#decrement')!
+)
 
 // adding this comment as a test.
