@@ -27,4 +27,3 @@ setupCounter(
   document.querySelector<HTMLButtonElement>('#decrement')!
 )
 
-// adding this comment as a test.
